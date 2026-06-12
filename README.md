@@ -33,7 +33,7 @@ The project was developed as an academic exercise to explore the intersection of
 
 ### Circuit Configuration
 
-![Circuit Configuration](images/circuit_example.png)
+![Circuit Configuration](images/circuit_input.png)
 
 ### Simulation Results
 
@@ -134,7 +134,7 @@ Basic-DC-Circuit-Simulator/
 ├── README.md
 ├── images/
 │   ├── homepage.png
-│   ├── circuit_example.png
+│   ├── circuit_input.png
 │   └── result.png
 │
 └── docs/
