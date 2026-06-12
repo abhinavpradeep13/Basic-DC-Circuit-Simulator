@@ -1,50 +1,140 @@
-DC Circuit Simulator (OOP & Tkinter)
+# Basic DC Circuit Simulator
 
-A Python-based DC Circuit Simulator that allows users to design, analyze, and solve electrical networks consisting of resistors and independent voltage sources. The project leverages Object-Oriented Programming (OOP) principles for its architecture and Modified Nodal Analysis (MNA) for its computational engine.
+A Python-based application for designing and analyzing **DC electrical circuits** using **Modified Nodal Analysis (MNA)**. The simulator provides an intuitive graphical user interface built with Tkinter, allowing users to define circuit components, solve circuit equations, and visualize analysis results.
 
-🚀 Features
+---
 
-OOP-Driven Architecture: Uses inheritance and polymorphism to model components (Resistors, Voltage Sources) through a unified interface.
-Modified Nodal Analysis (MNA): Formulates circuit equations into a matrix system ($[G][x] = [I]$) and solves them using the NumPy linear algebra library.
-Interactive GUI:Tabbed Interface: Dedicated tabs for adding resistors and voltage sources with specific node assignments.
-Real-time Tracking: A listbox displays all currently added components in the circuit.
-Result Display: Shows calculated node voltages and individual component currents in a formatted text area.
-Data Management: Includes functionality to clear the current workspace or save the analysis results to a .txt file.
-Error Handling: Provides user-friendly alerts for invalid inputs or unsolvable circuits (e.g., missing ground reference or conflicting sources).
+## Features
 
-🛠️ Technical Stack
+* Graphical User Interface (GUI) built using Tkinter
+* Support for resistors and independent voltage sources
+* Circuit analysis using Modified Nodal Analysis (MNA)
+* Object-Oriented Programming (OOP) architecture
+* Real-time tracking of circuit components
+* Calculation of node voltages and branch currents
+* Export analysis results to a text file
+* User-friendly error handling for invalid circuit configurations
 
-Language: Python 3.x
-GUI Framework: Tkinter / ttk
-Numerical Computation: NumPy
-Analysis Method: Modified Nodal Analysis (MNA)
+---
 
-📂 Project Structure
+## Application Preview
 
-The code is organized into modular classes for clear separation of concerns:
-CircuitComponent: The base class establishing the interface for all components (stamping and current calculation).
-Resistor & VoltageSource: Derived classes that implement specific physical laws (Ohm's Law, conductance stamping).
-Circuit: The core engine that manages the collection of components, builds the MNA matrices, and invokes the solver.
-CircuitGUI: The interface layer handling user inputs, visual output, and event handling.
+### Main Interface
 
-⚙️ Installation & Usage
+![Main Interface](images/homepage.png)
 
-Clone the repository:Bashgit clone https://github.com/your-username/dc-circuit-simulator.git
-cd dc-circuit-simulator
-Install dependencies:
+### Circuit Configuration
+
+![Circuit Configuration](images/circuit_input.png)
+
+### Simulation Results
+
+![Simulation Results](images/result.png)
+
+
+---
+
+## Technical Stack
+
+* **Programming Language:** Python
+* **GUI Framework:** Tkinter
+* **Numerical Computation:** NumPy
+* **Design Approach:** Object-Oriented Programming (OOP)
+* **Analysis Technique:** Modified Nodal Analysis (MNA)
+
+---
+
+## How It Works
+
+The simulator models electrical components as objects and constructs a system of equations representing the circuit using **Modified Nodal Analysis (MNA)**.
+
+The resulting matrix equation is solved using NumPy's linear algebra capabilities to determine:
+
+* Node voltages
+* Branch currents
+* Overall circuit behavior
+
+---
+
+## Installation
+
+### Prerequisites
+
+* Python 3.x
+* NumPy
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/abhinavpradeep13/Basic-DC-Circuit-Simulator.git
+cd Basic-DC-Circuit-Simulator
+```
+
+### Install Dependencies
+
+```bash
 pip install numpy
-Run the application:
-python "DC Circuit Simulator.py"
+```
 
-💡 How It Works
+### Run the Application
 
-The simulator works by converting a visual circuit into a mathematical representation:
-Stamping: Each component "stamps" its values into a conductance matrix (G) and a source vector (I).
-Matrix Solving: The system solves the equation $[G][x] = [I]$ where $[x]$ contains the unknown node voltages and voltage source currents.
-Output: The solver maps the results back to the GUI for the user to read.
+```bash
+python dc_circuit_simulator.py
+```
 
-💡 Applications & Advantages
+---
 
-This simulator serves as an excellent educational tool for learning circuit theory and demonstrating how OOP can be applied to engineering problems. Its modular design allows for easy scalability, meaning new components like dependent sources or capacitors can be added with minimal changes to the core solver
+## Example Use Case
 
-Developed as part of the Object-Oriented Programming curriculum.
+Consider a simple DC circuit consisting of:
+
+* Voltage Source: 12 V
+* Resistor R1: 100 Ω
+* Resistor R2: 200 Ω
+
+Using the simulator, users can define the circuit components, perform analysis, and obtain the corresponding node voltages and branch currents.
+
+---
+
+## Project Structure
+
+```text
+Basic-DC-Circuit-Simulator/
+│
+├── dc_circuit_simulator.py
+├── README.md
+└── images/
+    ├── homepage.png
+    ├── circuit_example.png
+    └── result.png
+```
+
+---
+
+## Future Improvements
+
+* Support for additional components (capacitors, inductors, current sources)
+* Circuit schematic drawing interface
+* Visualization of current flow
+* Saving and loading circuit configurations
+* Enhanced plotting and reporting capabilities
+
+---
+
+## Educational Purpose
+
+This project was developed to strengthen understanding of:
+
+* Circuit analysis techniques
+* Modified Nodal Analysis
+* Numerical methods in engineering
+* Object-Oriented Programming principles
+* GUI application development in Python
+
+---
+
+## Author
+
+**Abhinav Pradeep**
+
+If you found this project interesting, feel free to explore the repository and provide feedback.
