@@ -8,7 +8,7 @@ A Python-based application for designing and analyzing **DC electrical circuits*
 
 This project demonstrates the application of **Object-Oriented Programming (OOP)** principles in solving real-world engineering problems. Circuit elements such as resistors and voltage sources are modeled as objects, while Modified Nodal Analysis is used to formulate and solve the underlying system equations.
 
-The project was developed as an academic exercise to explore the intersection of **software engineering** and **electrical engineering computation**.
+The project was developed as an academic exercise to explore the intersection of **Software Engineering** and **Electrical Engineering**.
 
 ---
 
