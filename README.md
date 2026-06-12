@@ -1,19 +1,27 @@
 # Basic DC Circuit Simulator
 
-A Python-based application for designing and analyzing **DC electrical circuits** using **Modified Nodal Analysis (MNA)**. The simulator provides an intuitive graphical user interface built with Tkinter, allowing users to define circuit components, solve circuit equations, and visualize analysis results.
+A Python-based application for designing and analyzing **DC electrical circuits** using **Modified Nodal Analysis (MNA)**. The simulator features a graphical user interface (GUI) built with Tkinter, enabling users to create circuits, perform analysis, and obtain node voltages and branch currents efficiently.
+
+---
+
+## Overview
+
+This project demonstrates the application of **Object-Oriented Programming (OOP)** principles in solving real-world engineering problems. Circuit elements such as resistors and voltage sources are modeled as objects, while Modified Nodal Analysis is used to formulate and solve the underlying system equations.
+
+The project was developed as an academic exercise to explore the intersection of **software engineering** and **electrical engineering computation**.
 
 ---
 
 ## Features
 
-* Graphical User Interface (GUI) built using Tkinter
+* Graphical User Interface (GUI) developed using Tkinter
 * Support for resistors and independent voltage sources
 * Circuit analysis using Modified Nodal Analysis (MNA)
-* Object-Oriented Programming (OOP) architecture
-* Real-time tracking of circuit components
-* Calculation of node voltages and branch currents
-* Export analysis results to a text file
-* User-friendly error handling for invalid circuit configurations
+* Object-Oriented design with inheritance and polymorphism
+* Automatic calculation of node voltages and branch currents
+* Real-time component tracking and management
+* Save simulation results to text files
+* User-friendly error handling for invalid circuits
 
 ---
 
@@ -25,7 +33,7 @@ A Python-based application for designing and analyzing **DC electrical circuits*
 
 ### Circuit Configuration
 
-![Circuit Configuration](images/circuit_input.png)
+![Circuit Configuration](images/circuit_example.png)
 
 ### Simulation Results
 
@@ -34,25 +42,39 @@ A Python-based application for designing and analyzing **DC electrical circuits*
 
 ---
 
-## Technical Stack
+## Technologies Used
 
-* **Programming Language:** Python
-* **GUI Framework:** Tkinter
-* **Numerical Computation:** NumPy
-* **Design Approach:** Object-Oriented Programming (OOP)
-* **Analysis Technique:** Modified Nodal Analysis (MNA)
+| Technology                        | Purpose                                   |
+| --------------------------------- | ----------------------------------------- |
+| Python                            | Core programming language                 |
+| Tkinter                           | Graphical User Interface                  |
+| NumPy                             | Numerical computations and matrix solving |
+| Modified Nodal Analysis (MNA)     | Circuit analysis technique                |
+| Object-Oriented Programming (OOP) | Software design approach                  |
 
 ---
 
-## How It Works
+## Working Principle
 
-The simulator models electrical components as objects and constructs a system of equations representing the circuit using **Modified Nodal Analysis (MNA)**.
+The simulator follows the steps below:
 
-The resulting matrix equation is solved using NumPy's linear algebra capabilities to determine:
+1. The user defines circuit elements such as resistors and voltage sources.
 
-* Node voltages
-* Branch currents
-* Overall circuit behavior
+2. The system constructs the circuit equations using **Modified Nodal Analysis (MNA)**.
+
+3. The resulting matrix equation is formulated as:
+
+   **Gx = I**
+
+   where:
+
+   * **G** = Conductance matrix
+   * **x** = Unknown node voltages and source currents
+   * **I** = Current/voltage vector
+
+4. NumPy's linear algebra solver computes the solution.
+
+5. The calculated node voltages and component currents are displayed through the GUI.
 
 ---
 
@@ -86,13 +108,20 @@ python dc_circuit_simulator.py
 
 ## Example Use Case
 
-Consider a simple DC circuit consisting of:
+Consider a circuit containing:
 
 * Voltage Source: 12 V
 * Resistor R1: 100 Ω
 * Resistor R2: 200 Ω
 
-Using the simulator, users can define the circuit components, perform analysis, and obtain the corresponding node voltages and branch currents.
+The simulator can be used to:
+
+* Define the circuit components
+* Construct the circuit model
+* Solve the circuit equations
+* Display node voltages and branch currents
+
+This makes the application useful for both **educational purposes** and **basic circuit verification tasks**.
 
 ---
 
@@ -103,33 +132,58 @@ Basic-DC-Circuit-Simulator/
 │
 ├── dc_circuit_simulator.py
 ├── README.md
-└── images/
-    ├── homepage.png
-    ├── circuit_example.png
-    └── result.png
+├── images/
+│   ├── homepage.png
+│   ├── circuit_example.png
+│   └── result.png
+│
+└── docs/
+    └── dc_circuit_simulator.pptx
 ```
+
+---
+
+## Documentation
+
+A detailed presentation explaining the project architecture, implementation, and analysis methodology is included in this repository.
+
+**Project Presentation:**
+
+* `docs/DC_Circuit_Simulator_Presentation.pptx`
+
+The presentation covers:
+
+* Project objectives
+* Object-Oriented design approach
+* Modified Nodal Analysis (MNA)
+* GUI implementation using Tkinter
+* Simulation outputs
+* Applications and future scope
 
 ---
 
 ## Future Improvements
 
-* Support for additional components (capacitors, inductors, current sources)
-* Circuit schematic drawing interface
-* Visualization of current flow
+Potential enhancements include:
+
+* Support for current sources
+* Inclusion of capacitors and inductors
+* Circuit schematic editor with drag-and-drop functionality
 * Saving and loading circuit configurations
-* Enhanced plotting and reporting capabilities
+* Enhanced visualization and reporting features
+* Extension toward SPICE-like simulation capabilities
 
 ---
 
-## Educational Purpose
+## Educational Value
 
-This project was developed to strengthen understanding of:
+This project helped strengthen understanding of:
 
-* Circuit analysis techniques
-* Modified Nodal Analysis
+* Object-Oriented Programming concepts
+* GUI development using Tkinter
 * Numerical methods in engineering
-* Object-Oriented Programming principles
-* GUI application development in Python
+* Matrix-based circuit analysis techniques
+* Software design for engineering applications
 
 ---
 
@@ -137,4 +191,5 @@ This project was developed to strengthen understanding of:
 
 **Abhinav Pradeep**
 
-If you found this project interesting, feel free to explore the repository and provide feedback.
+If you have any suggestions or feedback regarding this project, feel free to reach out or open an issue in the repository.
+
